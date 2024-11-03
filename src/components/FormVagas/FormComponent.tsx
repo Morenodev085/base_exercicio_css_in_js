@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
 const FormVagas = styled.form`
-  .form {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    background-color: var(--cor-secundaria);
-    padding: 32px;
-    border-radius: 12px;
-    margin-top: 40px;
-  }
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background-color: var(--cor-secundaria);
+  padding: 32px;
+  border-radius: 12px;
+  margin-top: 40px;
 
   .btnPesquisar {
     background-color: var(--cor-principal);

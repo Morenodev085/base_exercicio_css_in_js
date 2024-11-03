@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react'
-
-import styles from './FormVagas'
+import FormComponent from './FormComponent' // Certifique-se de que o caminho está correto
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -11,21 +10,22 @@ const FormVagas = ({ aoPesquisar }: Props) => {
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
+    aoPesquisar(termo.toLowerCase())
   }
 
   return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
+    <FormComponent onSubmit={aoEnviarForm}>
       <input
-        className={styles.campo}
+        className="campo"
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <button className={styles.btnPesquisar} type="submit">
+      <button className="btnPesquisar" type="submit">
         Pesquisar
       </button>
-    </form>
+    </FormComponent>
   )
 }
+
 export default FormVagas
