@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import FormComponent from './FormComponent' // Certifique-se de que o caminho está correto
+import { StyledFormVagas, BtnPesquisar, Campo } from './FormComponent' // Caminho correto para o arquivo de estilos
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -14,17 +14,14 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   }
 
   return (
-    <FormComponent onSubmit={aoEnviarForm}>
-      <input
-        className="campo"
+    <StyledFormVagas onSubmit={aoEnviarForm}>
+      <Campo
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <button className="btnPesquisar" type="submit">
-        Pesquisar
-      </button>
-    </FormComponent>
+      <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
+    </StyledFormVagas>
   )
 }
 
