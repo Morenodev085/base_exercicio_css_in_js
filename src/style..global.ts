@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const EstiloGlobal = createGlobalStyle`
 :root {
@@ -28,5 +28,6 @@ body {
         max-width: 80%;
     }
 }
-`
+`;
+
 export default EstiloGlobal
